@@ -16,8 +16,8 @@ require_cmd() {
 }
 
 require_cmd docker
-if ! docker compose version >/dev/null 2>&1; then
-  echo "Docker Compose not available (try: docker compose version)" >&2
+if ! docker-compose --version >/dev/null 2>&1; then
+  echo "Docker Compose not available (try: docker-compose --version)" >&2
   exit 1
 fi
 
